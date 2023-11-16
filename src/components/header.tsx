@@ -1,6 +1,5 @@
 import { AppBar, Box, Button, Container, CssBaseline, Grid, ThemeProvider, Toolbar, Tooltip, Typography, createTheme, useMediaQuery, useTheme } from "@mui/material"
 import image1 from '../assets/imgM6.jpg'
-import background from '../assets/background.png'
 
 const defaultTheme = createTheme();
 
