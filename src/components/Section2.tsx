@@ -19,7 +19,7 @@ const cardInfo = [
     },
 ]
 
-const Section2 = () => {
+const Section2 = ({ sendToWhatsapp }: { sendToWhatsapp: () => void }) => {
 
     return (
         <Grid container justifyContent={'center'} alignContent={'center'}>
@@ -27,7 +27,7 @@ const Section2 = () => {
                 <Grid container xs={8} md={3} sm={8} mb={2}  p={3} justifyContent={'center'} >
                     <Icon icon={item.icon} color="brown" fontSize={100} />
                     <Typography variant="body1" textAlign={'center'} fontWeight={'bold'} mt={3} mb={3} >{item.name}</Typography>
-                    <Button  style={{color:'brown'}} >Contact Us <Icon icon="guidance:left-arrow" /></Button>
+                    <Button  style={{color:'brown'}} onClick={sendToWhatsapp} >Contact Us <Icon icon="guidance:left-arrow" /></Button>
                 </Grid>
             ))}
 

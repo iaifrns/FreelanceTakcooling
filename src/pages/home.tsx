@@ -32,7 +32,7 @@ export default function HomePage() {
       <CssBaseline />
       <Hearder sendToWhatsapp={sendToWhatsapp} />
       <Section1 />
-      <Section2 />
+      <Section2 sendToWhatsapp={sendToWhatsapp} />
       <Section3 />
       <Grid container justifyContent={'center'}>
         <Section5 />

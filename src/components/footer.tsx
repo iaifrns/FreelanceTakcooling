@@ -22,6 +22,11 @@ interface FooterProps {
 export default function Footer(props: FooterProps) {
   const { description, title } = props;
 
+  const sendToWhatsapp = () => {
+    const phone = '+327877020977'
+    window.location.href = `whatsapp://send?phone=${phone}`; 
+  }
+
   return (
     <Box component="footer" sx={{ bgcolor: '#02132b', py: 6 }}>
       <Container maxWidth="lg">
@@ -38,7 +43,7 @@ export default function Footer(props: FooterProps) {
           {description}
         </Typography>
         <Grid container justifyContent={'center'} mt={3} mb={3}>
-        <Icon icon="logos:whatsapp-icon" fontSize={24} style={{margin: 5}} />
+        <Icon onClick={sendToWhatsapp} icon="logos:whatsapp-icon" fontSize={24} style={{margin: 5}} />
         <Icon icon="logos:facebook" fontSize={24} style={{margin: 5}} />
         </Grid>
         <Copyright />
