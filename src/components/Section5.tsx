@@ -1,4 +1,3 @@
-
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
@@ -7,7 +6,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import { Typography } from '@mui/material';
 import image7 from '../assets/imgM7.jpg'
 import image8 from '../assets/imgM8.jpg'
-import image9 from '../assets/imgM9.jpg'
+import image9 from '../assets/imgM11.jpg'
 import image10 from '../assets/imgM10.jpg'
 
 export default function Section5() {
@@ -52,11 +51,11 @@ const itemData = [
     title: 'Troubleshooting of refrigerator, air conditioner, and cold room.',
   },
   {
-    img: image8,
-    title: 'Sale of refrigeration equipment.',
-  },
-  {
     img: image9,
     title: 'Maintainance of refrigeration equipment.',
+  },
+  {
+    img: image8,
+    title: 'Sale of refrigeration equipment.',
   }
 ];

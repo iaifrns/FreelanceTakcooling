@@ -20,12 +20,17 @@ export default function HomePage() {
     document.title = 'Takcooling'
   }, [])
 
+  const sendToWhatsapp = () => {
+    const phone = '+327877020977'
+    window.location.href = `whatsapp://send?phone=${phone}`; 
+  }
+
   return (
 
 
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
-      <Hearder />
+      <Hearder sendToWhatsapp={sendToWhatsapp} />
       <Section1 />
       <Section2 />
       <Section3 />
