@@ -21,7 +21,7 @@ export default function HomePage() {
   }, [])
 
   const sendToWhatsapp = () => {
-    const phone = '+327877020977'
+    const phone = '+447877020977'
     window.location.href = `whatsapp://send?phone=${phone}`; 
   }
 

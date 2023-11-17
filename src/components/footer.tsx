@@ -23,7 +23,7 @@ export default function Footer(props: FooterProps) {
   const { description, title } = props;
 
   const sendToWhatsapp = () => {
-    const phone = '+327877020977'
+    const phone = '+447877020977'
     window.location.href = `whatsapp://send?phone=${phone}`; 
   }
 
