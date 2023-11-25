@@ -8,17 +8,12 @@ import Section4 from '../components/Section4';
 import Footer from '../components/footer';
 import Section5 from '../components/Section5';
 import { Grid } from '@mui/material';
-import { useEffect } from 'react';
 
 
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
 export default function HomePage() {
-
-  useEffect(()=>{
-    document.title = 'Takcooling'
-  }, [])
 
   const sendToWhatsapp = () => {
     const phone = '+447877020977'
