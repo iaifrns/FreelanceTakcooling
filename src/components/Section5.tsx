@@ -9,9 +9,10 @@ import image8 from '../assets/frige.jpg'
 import image9 from '../assets/imgM11.jpg'
 import image10 from '../assets/imgM11.jpg'
 
-export default function Section5() {
+export default function Section5({isSmallScreen}: {isSmallScreen : boolean}) {
+
   return (
-    <ImageList sx={{ width: '80%', height: '70%', marginTop: 20 }}>
+    <ImageList sx={{ width: '80%', height: '70%', marginTop: isSmallScreen ? 30 : 10 }}>
       <ImageListItem key="Subheader" cols={2}>
         <Typography variant='h5' mb={5}>Gallery</Typography>
       </ImageListItem>

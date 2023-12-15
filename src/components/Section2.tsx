@@ -1,6 +1,8 @@
 import { Button, Grid, Typography } from "@mui/material"
 import { Icon } from '@iconify/react';
 
+import { Link } from "react-router-dom";
+
 const cardInfo = [
     {
         icon: "iconoir:oil-industry",
@@ -19,15 +21,18 @@ const cardInfo = [
     },
 ]
 
-const Section2 = ({ sendToWhatsapp }: { sendToWhatsapp: () => void }) => {
+const Section2 = () => {
 
     return (
         <Grid container justifyContent={'center'} alignContent={'center'}>
             {cardInfo.map(item => (
-                <Grid container xs={8} md={3} sm={8} mb={2}  p={3} justifyContent={'center'} >
+                <Grid container xs={8} md={3} sm={8} mb={2} p={3} justifyContent={'center'} >
                     <Icon icon={item.icon} color="brown" fontSize={100} />
                     <Typography variant="body1" textAlign={'center'} fontWeight={'bold'} mt={3} mb={3} >{item.name}</Typography>
-                    <Button  style={{color:'brown'}} onClick={sendToWhatsapp} >Contact Us <Icon icon="guidance:left-arrow" /></Button>
+
+                    <Link to={"/contact"} style={{ textDecoration: 'none', color: 'white' }}>
+                        <Button style={{ color: 'brown' }} >Contact Us <Icon icon="guidance:left-arrow" /></Button>
+                    </Link>
                 </Grid>
             ))}
 
