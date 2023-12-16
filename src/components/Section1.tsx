@@ -11,8 +11,11 @@ const Section1 = () => {
             <Grid xs={12} m={1}>
                 <Typography variant="subtitle1" fontWeight={'bold'}>WHAT WE OFFER</Typography>
             </Grid>
-            <Grid xs={12} md={6} sm={8} mb={5} display={'flex'} justifyContent={'center'}>
-                <Typography variant={smallScreen ? "h5" : "h4"} width={'90%'} fontWeight={'bold'}>Mastering Refrigeration Power for Industrial Excellence</Typography>
+            <Grid xs={12} md={6} sm={8} mb={5} >
+                <Grid container justifyContent={'center'} alignContent={'center'} height={'100%'}>
+                    <Typography variant={smallScreen ? "h5" : "h4"} width={'90%'} fontWeight={'bold'}>Mastering Refrigeration Power for Industrial Excellence</Typography>
+
+                </Grid>
             </Grid>
             <Grid xs={12} md={6} sm={8} >
                 <Grid container justifyContent={'center'}>
