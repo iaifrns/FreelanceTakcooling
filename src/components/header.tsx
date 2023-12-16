@@ -79,7 +79,7 @@ const Hearder = () => {
                             <Link to={"/contact"} style={{ textDecoration: 'none', color: 'white', width: '100%' }}>
                             <Button
                                 variant="contained"
-                                style={{ padding: 16, width: '35vh', backgroundColor: 'brown', marginBottom: 16 }}
+                                style={{ padding: 16, width: '35%', backgroundColor: 'brown', marginBottom: 16 }}
                             >
                                 <Typography variant="subtitle1">Contact Us</Typography>
                             </Button>
