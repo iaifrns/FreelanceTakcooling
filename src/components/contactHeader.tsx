@@ -2,7 +2,7 @@ import { Grid, Typography } from "@mui/material"
 
 export const Header = () => {
     return (
-        <Grid container justifyContent={'center'} alignItems={'center'} height={'20vh'} mt={5}>
+        <Grid container justifyContent={'center'} alignItems={'center'} height={'20vh'} mt={4}>
             <Grid>
                 <Typography variant="h4" fontWeight={'bold'}>Contact Us</Typography>
             </Grid>

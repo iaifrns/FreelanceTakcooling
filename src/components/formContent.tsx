@@ -42,9 +42,10 @@ export const FormContent = ({isSmallScreen} : {isSmallScreen : boolean}) => {
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
-            id="subject"
-            name="subject"
-            label="Subject"
+            required
+            id="town"
+            name="town"
+            label="Town"
             fullWidth
             variant="standard"
           />

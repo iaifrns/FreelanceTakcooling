@@ -22,7 +22,7 @@ export const ContactPage = () => {
         lng: 80.6337262, // default longitude
       }; */
 
-      const sendToWhatsapp = () => {
+    const sendToWhatsapp = () => {
         const phone = '+447877020977'
         window.location.href = `whatsapp://send?phone=${phone}`;
       }
@@ -30,7 +30,7 @@ export const ContactPage = () => {
     return (
         <ThemeProvider theme={defaultTheme}>
             <CssBaseline />
-            <TopBar  />
+            <TopBar isSmallScreen = {isSmallScreen} />
             <Header />
             {/* <Grid container>
                 <GoogleMap
@@ -42,7 +42,7 @@ export const ContactPage = () => {
                 </GoogleMap>
             </Grid> */}
             <Grid container justifyContent={'center'}>
-                <Grid container m={isSmallScreen ? 4 : 8} width={isSmallScreen ? '100%' : '80%'}>
+                <Grid container m={isSmallScreen ? 2 : 4} width={isSmallScreen ? '100%' : '80%'}>
                     <Grid xs={12} md={3} p={2}>
                         <ContactDetails onClick={sendToWhatsapp} />
                     </Grid>
