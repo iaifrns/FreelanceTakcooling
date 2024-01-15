@@ -52,7 +52,7 @@ const Hearder = () => {
 
     const theme = useTheme()
 
-    const smallScreen = useMediaQuery(theme.breakpoints.down('sm'))
+    const smallScreen = useMediaQuery(theme.breakpoints.down('md'))
 
     return (
         <>
