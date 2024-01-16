@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react/dist/iconify.js"
 import { Button, Grid, TextField, Typography } from "@mui/material"
 import { Fragment, useRef, useState } from "react"
-import { send } from 'emailjs-com';
+import { EmailJSResponseStatus, send } from 'emailjs-com';
 
 export const FormContent = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
 
@@ -17,9 +17,9 @@ export const FormContent = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
     e.preventDefault();
 
     send('service_jl2td49', 'template_x75hzgn', formState, 'yN-gLhPTPxMXzApQb')
-      .then((result) => {
+      .then((result : EmailJSResponseStatus) => {
         console.log(result.text);
-      }, (error) => {
+      }, (error : EmailJSResponseStatus) => {
         console.log(error.text);
       });
   };
