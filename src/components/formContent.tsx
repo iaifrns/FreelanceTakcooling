@@ -95,7 +95,7 @@ export const FormContent = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
             />
           </Grid>
           <Grid container justifyContent={'right'} m={3}>
-            <Button variant="contained" type="submit" sx={{ bgcolor: '#02132b', p: 2, width: isSmallScreen ? '100%' : "30%" }}>
+            <Button variant="contained" type="submit" sx={{ bgcolor: '#02132b', p: 2, width: isSmallScreen ? '100%' : "31%" }}>
               <Icon icon="ion:paper-plane" color="white" />
               <Typography fontWeight={'bold'}>Send</Typography>
             </Button>
