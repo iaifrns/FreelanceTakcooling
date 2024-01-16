@@ -1,35 +1,57 @@
 import { Icon } from "@iconify/react/dist/iconify.js"
-import { Button, Grid, TextField, Typography } from "@mui/material"
-import { Fragment, useRef, useState } from "react"
+import { Alert, Button, CircularProgress, Grid, TextField, Typography } from "@mui/material"
+import { Fragment, useState } from "react"
 import { EmailJSResponseStatus, send } from 'emailjs-com';
+
+enum ResponseStatus {
+  SUCCEESS,
+  NOTHING,
+  FAILED
+}
 
 export const FormContent = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
 
-  const form: any = useRef();
-
   const [formState, setFormState] = useState<Record<string, string>>({})
 
-  const changeHandler = (e : any) => {
-    setFormState({...formState, [e.target.name] : e.target.value})
+  const [response, setResponse] = useState<ResponseStatus>(ResponseStatus.NOTHING)
+  const [loading, setLoading] = useState(false);
+
+  const changeHandler = (e: any) => {
+    setFormState({ ...formState, [e.target.name]: e.target.value })
   }
 
   const sendEmail = (e: any) => {
     e.preventDefault();
 
+    setLoading(true)
+
     send('service_jl2td49', 'template_x75hzgn', formState, 'yN-gLhPTPxMXzApQb')
-      .then((result : EmailJSResponseStatus) => {
+      .then((result: EmailJSResponseStatus) => {
         console.log(result.text);
-      }, (error : EmailJSResponseStatus) => {
+        setLoading(false)
+        setResponse(ResponseStatus.SUCCEESS)
+        e.target.reset()
+      }, (error: EmailJSResponseStatus) => {
+        setResponse(ResponseStatus.FAILED)
+        setLoading(false)
         console.log(error.text);
       });
   };
 
   return (
     <Fragment>
-      <form ref={form} onSubmit={sendEmail}>
+      <form name="formContent" onSubmit={sendEmail}>
+        {response == ResponseStatus.SUCCEESS && <Alert variant="filled" severity="success" onClose={() => { setResponse(ResponseStatus.NOTHING) }}>
+          Email sended successfully.
+        </Alert>
+        }
+        {response == ResponseStatus.FAILED && <Alert variant="filled" severity="error" onClose={() => { setResponse(ResponseStatus.NOTHING) }}>
+          An error occured please try again.
+        </Alert>
+        }
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
-            <input style={{display : 'none'}} type="text" id="message" name="message"/>
+            <input style={{ display: 'none' }} type="text" id="message" name="message" />
             <TextField
               required
               id="name"
@@ -96,8 +118,15 @@ export const FormContent = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
           </Grid>
           <Grid container justifyContent={'right'} m={3}>
             <Button variant="contained" type="submit" sx={{ bgcolor: '#02132b', p: 2, width: isSmallScreen ? '100%' : "31%" }}>
-              <Icon icon="ion:paper-plane" color="white" />
-              <Typography fontWeight={'bold'}>Send</Typography>
+              {loading ? (
+                <CircularProgress />
+              ) : (
+                <>
+                  <Icon icon="ion:paper-plane" color="white" />
+                  <Typography fontWeight={'bold'}>Send</Typography>
+                </>
+              )}
+
             </Button>
           </Grid>
         </Grid>
