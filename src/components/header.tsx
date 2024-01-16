@@ -88,7 +88,7 @@ const Hearder = () => {
 
                                 <Button
                                     variant="contained"
-                                    style={{ padding: 16, width: smallScreen ? '100%' : '35%', backgroundColor: 'brown', marginBottom: 16 }}
+                                    style={{ padding: 16, width: smallScreen ? '100%' : '36%', backgroundColor: 'brown', marginBottom: 16 }}
                                 >
                                     <Typography variant="subtitle1">Contact Us</Typography>
                                 </Button>
