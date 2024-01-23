@@ -42,8 +42,8 @@ export const ContactPage = () => {
                 </GoogleMap>
             </Grid> */}
             <Grid container justifyContent={'center'}>
-                <Grid container m={isSmallScreen ? 2 : 4} width={isSmallScreen ? '100%' : '80%'}>
-                    <Grid xs={12} md={3} p={2}>
+                <Grid container m={isSmallScreen ? 2 : 3} width={isSmallScreen ? '100%' : '80%'}>
+                    <Grid xs={12} md={4} p={2}>
                         <ContactDetails onClick={sendToWhatsapp} />
                     </Grid>
                     <Grid xs={12} md={8} p={2}>

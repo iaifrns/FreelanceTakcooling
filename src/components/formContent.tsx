@@ -50,7 +50,7 @@ export const FormContent = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
         </Alert>
         }
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12}>
             <input style={{ display: 'none' }} type="text" id="message" name="message" />
             <TextField
               required
@@ -60,11 +60,10 @@ export const FormContent = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
               type="text"
               fullWidth
               autoComplete="given-name"
-              variant="standard"
               onChange={changeHandler}
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12}>
             <TextField
               required
               id="email"
@@ -74,10 +73,9 @@ export const FormContent = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
               fullWidth
               autoComplete="family-name"
               onChange={changeHandler}
-              variant="standard"
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12}>
             <TextField
               required
               id="phone"
@@ -87,10 +85,9 @@ export const FormContent = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
               onChange={changeHandler}
               fullWidth
               autoComplete="shipping address-level2"
-              variant="standard"
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12}>
             <TextField
               required
               id="town"
@@ -99,7 +96,6 @@ export const FormContent = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
               onChange={changeHandler}
               type="text"
               fullWidth
-              variant="standard"
             />
           </Grid>
           <Grid item xs={12}>
@@ -112,12 +108,10 @@ export const FormContent = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
               fullWidth
               onChange={changeHandler}
               autoComplete="shipping address-line1"
-              variant="standard"
-              sx={{ pt: 5 }}
             />
           </Grid>
-          <Grid container justifyContent={'right'} m={3}>
-            <Button variant="contained" type="submit" sx={{ bgcolor: '#02132b', p: 2, width: isSmallScreen ? '100%' : "31%" }}>
+          <Grid container justifyContent={'center'} mt={3} ml={3}>
+            <Button variant="contained" type="submit" sx={{ bgcolor: '#02132b', p: 2, width: '100%' }}>
               {loading ? (
                 <CircularProgress />
               ) : (
