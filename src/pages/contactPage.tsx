@@ -47,7 +47,7 @@ export const ContactPage = () => {
                         <ContactDetails onClick={sendToWhatsapp} />
                     </Grid>
                     <Grid xs={12} md={8} p={2}>
-                        <FormContent isSmallScreen={isSmallScreen} />
+                        <FormContent />
                     </Grid>
                 </Grid>
             </Grid>

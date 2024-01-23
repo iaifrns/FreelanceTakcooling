@@ -9,7 +9,7 @@ enum ResponseStatus {
   FAILED
 }
 
-export const FormContent = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
+export const FormContent = () => {
 
   const [formState, setFormState] = useState<Record<string, string>>({})
 

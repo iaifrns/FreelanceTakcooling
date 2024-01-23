@@ -8,7 +8,7 @@ export const TopBar = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
 
     return (
         <AppBar position="static" style={{ backgroundColor: '#02132b', padding: 8 }}>
-            <Grid container mt={3} justifyContent={'center'}>
+            <Grid container m={3} justifyContent={'center'}>
                 <Grid container width={'90%'} justifyContent={ !isSmallScreen ? 'space-between' : 'center'}>
                     <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>
                         <Typography
