@@ -30,7 +30,7 @@ export const ContactPage = () => {
     return (
         <ThemeProvider theme={defaultTheme}>
             <CssBaseline />
-            <TopBar isSmallScreen = {isSmallScreen} />
+            <TopBar />
             <Header />
             {/* <Grid container>
                 <GoogleMap
