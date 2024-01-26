@@ -1,4 +1,4 @@
-import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material"
+import { Stack, Typography, useMediaQuery, useTheme } from "@mui/material"
 
 const Section1 = () => {
 
@@ -7,24 +7,19 @@ const Section1 = () => {
     const smallScreen = useMediaQuery(theme.breakpoints.down('md'))
 
     return (
-        <Grid container justifyContent={'center'} p={8}>
-            <Grid xs={12} m={1}>
-                <Typography variant="subtitle1" fontWeight={'bold'}>WHAT WE OFFER</Typography>
-            </Grid>
-            <Grid xs={12} md={6} sm={8} mb={5} >
-                <Grid container justifyContent={'center'} alignContent={'center'} height={'100%'}>
-                    <Typography variant={smallScreen ? "h5" : "h4"} width={'90%'} fontWeight={'bold'}>Mastering Refrigeration Power for Industrial Excellence</Typography>
-
-                </Grid>
-            </Grid>
-            <Grid xs={12} md={6} sm={8} >
-                <Grid container justifyContent={'center'}>
-                    <Typography width={'90%'}>Discover unparalleled expertise with our Refrigeration Services, where we redefine industry standards through mastery in harnessing refrigeration power.</Typography>
-                    <Typography mt={5} width={'90%'}> Our commitment to excellence ensures your industrial needs are not just met but surpassed, setting new benchmarks in efficiency and performance. Experience the future of cooling solutions with a dedicated partner focused on delivering unmatched reliability and innovation.
+        <Stack direction={'column'} flex={1} p={3} justifyContent={'center'} padding={{xs:3, sm:6}}>
+            <Typography variant="subtitle1" fontWeight={'bold'}>WHAT WE OFFER</Typography>
+            <Stack direction={{xs:'column',sm:'row'}} p={'10px 0px'}>
+                <Stack flex={1}>
+                    <Typography variant={smallScreen ? "h5" : "h4"} width={'100%'} fontWeight={'bold'}>Mastering Refrigeration Power for Industrial Excellence</Typography>
+                </Stack>
+                <Stack direction={'column'} flex={2} p={'10px 0px'}>
+                    <Typography width={'100%'}>Discover unparalleled expertise with our Refrigeration Services, where we redefine industry standards through mastery in harnessing refrigeration power.</Typography>
+                    <Typography mt={5} width={'100%'}> Our commitment to excellence ensures your industrial needs are not just met but surpassed, setting new benchmarks in efficiency and performance. Experience the future of cooling solutions with a dedicated partner focused on delivering unmatched reliability and innovation.
                         Your success begins with our mastery in refrigeration for industrial power.</Typography>
-                </Grid>
-            </Grid>
-        </Grid>
+                </Stack>
+            </Stack>
+        </Stack>
     )
 }
 
