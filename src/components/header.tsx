@@ -8,7 +8,7 @@ export const TopBar = () => {
 
     return (
         <AppBar position="static" style={{ backgroundColor: '#02132b' }}>
-            <Toolbar sx={{justifyContent: 'space-between', p: 3}}>
+            <Toolbar sx={{ justifyContent: {xs:'center', sm:'space-between'}, p: 3 }}>
                 <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>
                     <Typography
                         variant="h5"
@@ -16,8 +16,8 @@ export const TopBar = () => {
                         component="a"
                         href="#app-bar-with-responsive-menu"
                         sx={{
-                            mr: 5,
-                            display: { xs: 'flex', md: 'flex' },
+                            mr: {xs:0, sm:5},
+                            display: 'flex',
                             fontFamily: 'monospace',
                             fontWeight: 700,
                             letterSpacing: '.3rem',
@@ -62,7 +62,7 @@ const Hearder = () => {
         <>
             <ThemeProvider theme={defaultTheme}>
                 <TopBar />
-                <Stack direction={{ xs: 'column', sm: 'row' }} sx={{ backgroundColor: '#02132b', p: "0px 18px" }}>
+                <Stack direction={{ xs: 'column', sm: 'row' }} sx={{ backgroundColor: '#02132b', p: { xs: '0px 0px', sm: "0px 18px" } }}>
 
                     <BoxContent
                     >
